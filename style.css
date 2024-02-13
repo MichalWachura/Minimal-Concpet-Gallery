@@ -146,10 +146,10 @@ ul li{
     width: 100%;
     height: 100%;
     background-size: cover;
-    background-image:url(./img/1.jpeg) ;
+    
     background-position:center;
     transform: scale(1.5);
-    transition: backgrond-image 0.5s transform 1.5s ease-in-out;
+    transition: background-image 0.5s, transform 1.5s ease-out;
 }
 
 .previous{
@@ -177,7 +177,7 @@ ul li{
     pointer-events: none;
 }
 .cursor.right{
-    display: none;
+    display: block;
     pointer-events: none;
     width: 0;
     left: 0;
@@ -188,7 +188,7 @@ ul li{
 }
 
 .cursor.left{
-    display: none;
+    display: block;
     pointer-events: none;
     width: 0;
     left: 0;
@@ -196,4 +196,43 @@ ul li{
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
     z-index: 10;
+}
+
+.splash{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--main-color);
+    z-index: 2;
+    display: flex;
+    padding: 2rem;
+    align-items: center;
+    justify-content: flex-end;
+    color:var(--third-color)
+
+
+}
+
+.splash.active{
+   opacity: 0;
+   transition: 0.5s;
+}
+
+.splash-title-container{
+    width:20%;
+    height: 20px;
+    overflow:hidden ;
+}
+
+.splash-title{
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.splash-title span{
+    display: inline-block;
+    transform: translateY(20px);
+    transition: 0.3s;
 }
